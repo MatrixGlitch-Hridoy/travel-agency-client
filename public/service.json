@@ -1,0 +1,58 @@
+[
+  {
+    "name": "St. Regis Resort",
+    "place": "Maldives",
+    "Description": "Book your luxury hotel stay with St. Regis Resort. We offer 5-star luxury accommodation along with signature services, exquisite experiences and timeless",
+    "Price": "350",
+    "img": "https://ibb.co/sqvC7BN"
+  },
+  {
+    "name": "Ayada Water Villa",
+    "place": "Maldives",
+    "Description": "Book your luxury hotel stay with Ayada Water Villa. We offer 5-star luxury accommodation along with signature services, exquisite experiences and timeless",
+    "Price": "550",
+    "img": "https://ibb.co/6mm1n8s"
+  },
+  {
+    "name": "Beach Villa",
+    "place": "Maldives",
+    "Description": "Book your luxury hotel stay with Beach Villa. We offer 5-star luxury accommodation along with signature services, exquisite experiences and timeless",
+    "Price": "450",
+    "img": "https://ibb.co/K08DVnC"
+  },
+  {
+    "name": "Aksari Resort",
+    "place": "Bali",
+    "Description": "Book your luxury hotel stay with Aksari Resort. We offer 5-star luxury accommodation along with signature services, exquisite experiences and timeless",
+    "Price": "250",
+    "img": "https://ibb.co/ypNBHc9"
+  },
+  {
+    "name": "Boutique Surf",
+    "place": "Bali",
+    "Description": "Book your luxury hotel stay with Boutique Surf. We offer 5-star luxury accommodation along with signature services, exquisite experiences and timeless",
+    "Price": "200",
+    "img": "https://ibb.co/Vg6xhm1"
+  },
+  {
+    "name": "Private Villa",
+    "place": "Bali",
+    "Description": "Book your luxury hotel stay with Private Villa. We offer 5-star luxury accommodation along with signature services, exquisite experiences and timeless",
+    "Price": "300",
+    "img": "https://ibb.co/tMJSkzh"
+  },
+  {
+    "name": "Royal Tulip",
+    "place": "Cox's-Bazar",
+    "Description": "Book your luxury hotel stay with Royal Tulip. We offer 5-star luxury accommodation along with signature services, exquisite experiences and timeless",
+    "Price": "200",
+    "img": "https://ibb.co/zPPqQHQ"
+  },
+  {
+    "name": "Sayeman Resort",
+    "place": "Cox's-Bazar",
+    "Description": "Book your luxury hotel stay with Sayeman Resort. We offer 5-star luxury accommodation along with signature services, exquisite experiences and timeless",
+    "Price": "250",
+    "img": "https://ibb.co/FmkZwkv"
+  }
+]
