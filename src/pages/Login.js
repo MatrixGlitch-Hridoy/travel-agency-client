@@ -19,7 +19,14 @@ const Login = () => {
     }
     return (
         <>
-            <button onClick={handleGoogleLogin}>Login With Google</button>
+            <div className="container" style={{height:"50vh"}}>
+                <div className="row justify-content-center mx-auto">
+                    <div className="col-sm-6 offset-sm-3 " style={{marginTop:"10rem"}}>
+                        <button onClick={handleGoogleLogin} className="btn btn-warning fw-bolder px-4 py-3">Login With Google</button>
+                    </div>
+                </div>
+            </div>
+            
         </>
     );
 };
