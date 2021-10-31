@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Hotel from './Hotel';
 
@@ -6,10 +7,9 @@ const Hotels = () => {
     const [isLoading, setIsLoading] = useState(false);
     useEffect(()=>{
         setIsLoading(true)
-        fetch('https://ghastly-coffin-01875.herokuapp.com/hotels')
-        .then(res=>res.json())
-        .then(data=>{
-            setHotels(data)
+        axios.get('https://ghastly-coffin-01875.herokuapp.com/hotels')
+        .then(res=>{
+            setHotels(res.data)
             setIsLoading(false)
         });
     },[])
@@ -20,7 +20,7 @@ const Hotels = () => {
                 {
                     !isLoading ? hotels.map(hotel=><Hotel key={hotel._id} hotel={hotel}></Hotel>)
                     :
-                    <h1 className="spinner-grow text-warning my-5 text-center">Loding....</h1>
+                    <p className="spinner-grow text-warning my-5 text-center"></p>
                     
                 }
             </div>            
