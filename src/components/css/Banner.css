@@ -1,0 +1,27 @@
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../images/pexels-pok-rie-4251426.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  height: 100vh;
+}
+.headings {
+  margin-top: 15rem;
+}
+.headings h1 {
+  font-size: 6rem;
+}
+.headings p {
+  font-size: 3rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .headings h1 {
+    font-size: 3rem;
+  }
+  .headings p {
+    font-size: 1rem;
+  }
+}

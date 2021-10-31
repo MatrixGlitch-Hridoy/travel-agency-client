@@ -7,10 +7,10 @@ const Header = () => {
   const { user, logOut } = useAuth();
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div className="container">
           <Link className="navbar-brand" to="/">
-            Navbar
+            Go-Far
           </Link>
           <button
             className="navbar-toggler"
@@ -31,7 +31,22 @@ const Header = () => {
                 </Link>
               </li>
               {user?.email && (
-                <li className="my-auto fw-bold me-2">{user.displayName}</li>
+                <li>
+                <Link className="nav-link me-2 " to="/my-bookings">My Bookings</Link>
+                </li>
+              )}
+              {user?.email && (
+                <li>
+                <Link className="nav-link me-2 " to="/manage-bookings">Manage All Bookings</Link>
+                </li>
+              )}
+              {user?.email && (
+                <li>
+                <Link className="nav-link me-2 " to="/add-hotel">Add Hotel</Link>
+                </li>
+              )}
+              {user?.email && (
+                <li className="my-auto fw-bold me-2 text-warning">{user.displayName}</li>
               )}
               {user?.email ? (
                 <Link to="/">
@@ -39,7 +54,7 @@ const Header = () => {
                 </Link>
               ) : (
                 <Link to="/login">
-                  <button className="btn btn-primary ">Sign In</button>
+                  <button className="btn btn-warning px-4 fw-bold">Sign In</button>
                 </Link>
               )}
             </ul>
