@@ -15,7 +15,7 @@ const Hotels = () => {
     },[])
     return (
         <div className="container my-5">
-            <h1 className="text-center">Popular Hotels</h1>
+            <h1 className="text-center fw-bolder">Popular Hotels</h1>
             <div className="row row-cols-1 row-cols-md-3 g-4">
                 {
                     hotels.map(hotel=><Hotel key={hotel._id} hotel={hotel}></Hotel>)
