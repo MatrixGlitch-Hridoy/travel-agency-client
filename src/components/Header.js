@@ -9,8 +9,8 @@ const Header = () => {
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container">
-          <Link className="navbar-brand" to="/">
-            Go-Far
+          <Link className="navbar-brand fw-bolder" to="/" style={{fontSize:"2rem"}}>
+            <span className="text-warning">G</span>o-<span className="text-warning">F</span>ar
           </Link>
           <button
             className="navbar-toggler"

@@ -16,7 +16,7 @@ const BookHotel = () => {
     const history = useHistory();
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/hotels/${id}`)
+        fetch(`https://ghastly-coffin-01875.herokuapp.com/hotels/${id}`)
         .then(res=>res.json())
         .then(data=>{
           setHotel(data)
@@ -42,7 +42,7 @@ const BookHotel = () => {
           status:'pending'
         }
 
-        axios.post('http://localhost:5000/bookings',values)
+        axios.post('https://ghastly-coffin-01875.herokuapp.com/bookings',values)
         .then(res=>{
           if(res.data.insertedId){
             alert('Booking Successful');

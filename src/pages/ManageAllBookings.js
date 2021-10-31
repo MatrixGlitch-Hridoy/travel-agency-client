@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 const ManageAllBookings = () => {
   const [manageBookings, setManageBookings] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:5000/bookings").then((res) => {
+    axios.get("https://ghastly-coffin-01875.herokuapp.com/bookings").then((res) => {
       setManageBookings(res.data);
     });
   }, [manageBookings]);
@@ -12,7 +12,7 @@ const ManageAllBookings = () => {
   const handleCancelBooking = (id) => {
     const permission = window.confirm("Are you sure, you want to cancel?");
     if (permission) {
-      axios.delete(`http://localhost:5000/bookings/${id}`).then((res) => {
+      axios.delete(`https://ghastly-coffin-01875.herokuapp.com/bookings/${id}`).then((res) => {
         // console.log(res);
         if (res.data.deletedCount > 0) {
           alert("Booking Cancel Successful!");
@@ -26,7 +26,7 @@ const ManageAllBookings = () => {
   };
   
   const handleStatus = (id) => {
-    axios.put(`http://localhost:5000/bookings/${id}`)
+    axios.put(`https://ghastly-coffin-01875.herokuapp.com/bookings/${id}`)
     .then(res=>{
         if(res.status===200){
         alert('Booking Approved SuccessFully!')

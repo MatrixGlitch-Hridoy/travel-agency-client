@@ -6,7 +6,7 @@ const Hotels = () => {
     const [isLoading, setIsLoading] = useState(false);
     useEffect(()=>{
         setIsLoading(true)
-        fetch('http://localhost:5000/hotels')
+        fetch('https://ghastly-coffin-01875.herokuapp.com/hotels')
         .then(res=>res.json())
         .then(data=>{
             setHotels(data)

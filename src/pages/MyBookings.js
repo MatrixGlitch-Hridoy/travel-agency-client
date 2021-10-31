@@ -6,14 +6,14 @@ const MyBookings = () => {
   const { user } = useAuth();
   const [bookings, setBookings] = useState([]);
   useEffect(() => {
-    axios.get(`http://localhost:5000/bookings/${user.email}`).then((res) => {
+    axios.get(`https://ghastly-coffin-01875.herokuapp.com/bookings/${user.email}`).then((res) => {
       setBookings(res.data);
     });
   }, []);
   const handleCancelBooking = (id) => {
     const permission = window.confirm("Are you sure, you want to cancel?");
     if (permission) {
-      axios.delete(`http://localhost:5000/bookings/${id}`).then((res) => {
+      axios.delete(`https://ghastly-coffin-01875.herokuapp.com/bookings/${id}`).then((res) => {
         // console.log(res);
         if (res.data.deletedCount > 0) {
           alert("Booking Cancel Successful!");

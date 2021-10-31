@@ -20,7 +20,7 @@ const AddHotel = () => {
           Description:description
         }
 
-        axios.post('http://localhost:5000/hotels',values)
+        axios.post('https://ghastly-coffin-01875.herokuapp.com/hotels',values)
         .then(res=>{
           if(res.data.insertedId){
             alert('Hotel Added Successfully!');
