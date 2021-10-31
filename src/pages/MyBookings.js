@@ -26,10 +26,10 @@ const MyBookings = () => {
     }
   };
   return (
-    <div>
+    <div class="container">
       <h1 class="text-center mt-5 ">My Bookings</h1>
       <div class="row mt-5">
-        <div class="col-md-6 col-sm-12 justify-content-center mx-auto">
+        <div class="col-sm-12 justify-content-center mx-auto">
           <table class="table border-primary">
             <thead>
               <tr>
@@ -38,6 +38,7 @@ const MyBookings = () => {
                 <th scope="col">Price</th>
                 <th scope="col">Username</th>
                 <th scope="col">Email</th>
+                <th scope="col">Status</th>
                 <th scope="col">Action</th>
               </tr>
             </thead>
@@ -51,6 +52,7 @@ const MyBookings = () => {
                     <td>{booking.price}</td>
                     <td>{booking.username}</td>
                     <td>{booking.email}</td>
+                    <td className="text-success fw-bold">{booking.status}</td>
                     <td>
                       <button
                         class="btn btn-danger"

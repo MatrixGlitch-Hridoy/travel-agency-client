@@ -5,7 +5,7 @@ const Hotels = () => {
     const [hotels, setHotels] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     useEffect(()=>{
-        setIsLoading(true);
+        setIsLoading(true)
         fetch('http://localhost:5000/hotels')
         .then(res=>res.json())
         .then(data=>{
@@ -18,7 +18,10 @@ const Hotels = () => {
             <h1 className="text-center fw-bolder">Popular Hotels</h1>
             <div className="row row-cols-1 row-cols-md-3 g-4">
                 {
-                    hotels.map(hotel=><Hotel key={hotel._id} hotel={hotel}></Hotel>)
+                    !isLoading ? hotels.map(hotel=><Hotel key={hotel._id} hotel={hotel}></Hotel>)
+                    :
+                    <h1 className="spinner-grow text-warning my-5 text-center">Loding....</h1>
+                    
                 }
             </div>            
         </div>

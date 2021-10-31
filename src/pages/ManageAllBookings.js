@@ -24,11 +24,20 @@ const ManageAllBookings = () => {
       });
     }
   };
+  
+  const handleStatus = (id) => {
+    axios.put(`http://localhost:5000/bookings/${id}`)
+    .then(res=>{
+        if(res.status===200){
+        alert('Booking Approved SuccessFully!')
+        }
+    })
+  }
   return (
-    <div>
+    <div class="container">
       <h1 class="text-center mt-5 ">Manage All Bookings</h1>
       <div class="row mt-5">
-        <div class="col-md-8 col-sm-12 justify-content-center mx-auto">
+        <div class="col-sm-12 justify-content-center mx-auto">
           <table class="table border-primary">
             <thead>
               <tr>
@@ -52,7 +61,11 @@ const ManageAllBookings = () => {
                     <td>{booking.email}</td>
                     <td>{booking.status}</td>
                     <td>
-                      <button class="btn btn-success">Approve</button>
+                        {booking.status!=='Approved' ?
+                      <button onClick={()=>handleStatus(booking._id)} class="btn btn-success">Approve</button>
+                      :
+                      ""
+                }
                       <button
                         class="btn btn-danger mx-1"
                         onClick={() => handleCancelBooking(booking._id)}

@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import ManageAllBookings from "./pages/ManageAllBookings";
 import MyBookings from "./pages/MyBookings";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             <NotFound />
           </Route>
         </Switch>
+        <Footer/>
       </Router>
     </AuthProvider>
   );
